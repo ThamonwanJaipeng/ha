@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Addon</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Assistant Add-on</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 <body>
-
-<div class="card">
-  <h1>Home Assistant Add-on</h1>
-  <button onclick="showMessage()">
-    Click Me
-  </button>
-
-  <p id="msg"></p>
-</div>
-
-<script src="script.js"></script>
+    <div class="sidebar">
+        <div class="logo">
+            <i class="material-icons-outlined">dashboard</i>
+            <span>My Add-on</span>
+        </div>
+        <nav>
+            <a class="active" href="#"><i class="material-icons-outlined">dashboard</i> Dashboard</a>
+            <a href="#"><i class="material-icons-outlined">lightbulb_outline</i> Lights</a>
+            <a href="#"><i class="material-icons-outlined">thermostat</i> Climate</a>
+            <a href="#"><i class="material-icons-outlined">settings</i> Settings</a>
+        </nav>
+    </div>
+    <div class="content">
+        <header class="topbar">
+            <h1>Dashboard</h1>
+            <div class="status" id="statusText">Ready</div>
+        </header>
+        <button id="demoBtn">Test Interaction</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
