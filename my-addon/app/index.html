@@ -3,30 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Assistant Add-on</title>
+    <title>HA Dashboard Pro</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <i class="material-icons-outlined">dashboard</i>
-            <span>My Add-on</span>
-        </div>
-        <nav>
-            <a class="active" href="#"><i class="material-icons-outlined">dashboard</i> Dashboard</a>
-            <a href="#"><i class="material-icons-outlined">lightbulb_outline</i> Lights</a>
-            <a href="#"><i class="material-icons-outlined">thermostat</i> Climate</a>
-            <a href="#"><i class="material-icons-outlined">settings</i> Settings</a>
-        </nav>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="material-icons-round">settings_input_component</i>
+                <span>HA Add-on</span>
+            </div>
+            <nav>
+                <a href="#" class="active"><i class="material-icons-round">dashboard</i> Dashboard</a>
+                <a href="#"><i class="material-icons-round">devices</i> Devices</a>
+                <a href="#"><i class="material-icons-round">auto_awesome</i> Automations</a>
+                <a href="#"><i class="material-icons-round">settings</i> Settings</a>
+            </nav>
+            <div class="system-status">
+                <div class="status-dot"></div>
+                <div>
+                    <p class="status-label">System Status</p>
+                    <p class="status-value">Online</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <div>
+                    <h1>Welcome back! 👋</h1>
+                    <p>Here's what's happening in your smart home.</p>
+                </div>
+                <div class="header-info">
+                    <div class="weather">28°C <small>Partly Cloudy</small></div>
+                </div>
+            </header>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="material-icons-round blue">lightbulb</i>
+                    <h3>Lights</h3>
+                    <p class="value">12 <span>Active</span></p>
+                </div>
+                <div class="stat-card">
+                    <i class="material-icons-round green">thermostat</i>
+                    <h3>Temperature</h3>
+                    <p class="value">26.5°C <span>Comfortable</span></p>
+                </div>
+                <div class="stat-card">
+                    <i class="material-icons-round purple">opacity</i>
+                    <h3>Humidity</h3>
+                    <p class="value">58% <span>Normal</span></p>
+                </div>
+                <div class="stat-card">
+                    <i class="material-icons-round orange">bolt</i>
+                    <h3>Energy</h3>
+                    <p class="value">2.45 kW <span>Now</span></p>
+                </div>
+            </div>
+
+            <section class="controls-section">
+                <h2>Quick Controls</h2>
+                <div class="controls-grid">
+                    <div class="control-card">
+                        <i class="material-icons-round">living</i>
+                        <div class="info">
+                            <p>Living Room</p>
+                            <small>Lights</small>
+                        </div>
+                        <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                    </div>
+                    <div class="control-card">
+                        <i class="material-icons-round">tv</i>
+                        <div class="info">
+                            <p>TV</p>
+                            <small>Living Room</small>
+                        </div>
+                        <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="content">
-        <header class="topbar">
-            <h1>Dashboard</h1>
-            <div class="status" id="statusText">Ready</div>
-        </header>
-        <button id="demoBtn">Test Interaction</button>
-    </div>
-    <script src="script.js"></script>
 </body>
 </html>
